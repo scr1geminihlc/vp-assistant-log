@@ -23,7 +23,6 @@ const db = getFirestore(app);
 
 // --- Task Configuration based on CSV ---
 const taskConfig = [
-  { id: 'leave_day', time: '早上', title: '今日請休假 (包含特休/病假/事假/公假)', desc: '*當日若請假，僅需勾選此項目，其餘任務皆無需執行。' },
   { id: 'morning_open', time: '早上', title: '辦公室開門', desc: '將門長開 (卡長放直到逼兩聲)' },
   { id: 'morning_clean', time: '早上', title: '環境整潔 (掃地.擦桌.拖地.拉窗簾.澆花.洗水槽)', desc: '*副校長在時不打擾，等副校長外出時補整理。\n*適時檢查水壺有沒有水、咖啡喝完杯子清洗。\n*一個禮拜至少換一次水槽網。\n*視情況清洗水槽、拖地。' },
   { id: 'morning_coffee', time: '早上', title: '準備咖啡 (馬克杯/保溫瓶)', desc: '水量: Extra Long Coffee / 濃度: Standard Coffee。\n*馬克杯 : 2杯+1杯+一些熱水\n*開會保溫瓶 : 2杯+一些點熱水' },
