@@ -124,9 +124,9 @@ export default function App() {
   const customTasksList = logData.customTasks || [];
   const completedRegularTasks = Object.values(logData.tasks || {}).filter(Boolean).length;
   const completedCustomTasks = customTasksList.filter(t => t.completed).length;
-  const totalCompletedTasks = completedRegularTasks + completedCustomTasks;
-  const totalTasksCount = taskConfig.length + customTasksList.length;
-  const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / totalTasksCount) * 100) : 0;
+const totalCompletedTasks = completedRegularTasks + completedCustomTasks - (logData?.tasks?.leave_day ? 1 : 0);
+const totalTasksCount = taskConfig.length - 1 + customTasksList.length;
+const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / totalTasksCount) * 100) : 0;
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans print:bg-white print:p-0">
