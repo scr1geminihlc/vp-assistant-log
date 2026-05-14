@@ -239,7 +239,6 @@ export default function App() {
       onChange={() => toggleTask('leave_day')}
       disabled={role === 'supervisor'}
     />
-    />
   </div>
   <div>
     <h3 className={`font-bold text-lg ${logData?.tasks?.leave_day ? 'text-red-700' : 'text-slate-700'}`}>
