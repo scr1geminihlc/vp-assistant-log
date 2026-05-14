@@ -245,7 +245,7 @@ export default function App() {
       今日請休假 (特休/病假/事假/公假)
     </h3>
     <p className="text-sm text-slate-500">
-      {logData?.tasks?.leave_day ? '✨ 已標記為休假，今日任務免執行' : '若今日請假請勾選此處，月報表將自動同步'}
+      {logData?.tasks?.leave_day ? '✨ 已標記為休假' : '若今日請假請勾選此處，月報表將自動同步'}
     </p>
   </div>
 </div>
