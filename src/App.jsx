@@ -23,6 +23,7 @@ const db = getFirestore(app);
 
 // --- Task Configuration based on CSV ---
 const taskConfig = [
+  { id: 'leave_day', time: '隱藏', title: '請休假', desc: '' },
   { id: 'morning_open', time: '早上', title: '辦公室開門', desc: '將門長開 (卡長放直到逼兩聲)' },
   { id: 'morning_clean', time: '早上', title: '環境整潔 (掃地.擦桌.拖地.拉窗簾.澆花.洗水槽)', desc: '*副校長在時不打擾，等副校長外出時補整理。\n*適時檢查水壺有沒有水、咖啡喝完杯子清洗。\n*一個禮拜至少換一次水槽網。\n*視情況清洗水槽、拖地。' },
   { id: 'morning_coffee', time: '早上', title: '準備咖啡 (馬克杯/保溫瓶)', desc: '水量: Extra Long Coffee / 濃度: Standard Coffee。\n*馬克杯 : 2杯+1杯+一些熱水\n*開會保溫瓶 : 2杯+一些點熱水' },
@@ -179,7 +180,15 @@ export default function App() {
                       return (
                         <tr key={dateStr} className={`${dateStr === new Date().toISOString().split('T')[0] ? 'bg-blue-50/40' : ''} ${completed > 0 && completed < total ? 'bg-red-50/60' : ''} ${!!dayData.supervisorFeedback ? 'bg-amber-50/40' : ''}`}>
                           <td className="px-4 py-3 font-medium text-slate-700 whitespace-nowrap">{dateStr.split('-').slice(1).join('/')}</td>
-                          <td className="px-4 py-3"><span className={`px-2 py-1 rounded-full text-xs font-medium ${completed === total && total > 0 ? 'bg-emerald-100 text-emerald-700' : completed > 0 ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-500'}`}>{completed} / {total}</span></td>
+  <td className="px-4 py-3">
+  {dayData?.tasks?.leave_day ? (
+    <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-bold shadow-sm">休假</span>
+  ) : (
+    <span className={`px-2 py-1 rounded-full text-xs font-medium ${completed === total && total > 0 ? 'bg-emerald-100 text-emerald-700' : completed > 0 ? 'bg-blue-100 text-blue-700' : 'bg-slate-100 text-slate-500'}`}>
+      {completed} / {total}
+    </span>
+  )}
+</td>
                           <td className="px-4 py-3 text-slate-600 whitespace-pre-wrap">{dayData.assistantNotes || '-'}</td>
                           <td className={`px-4 py-3 whitespace-pre-wrap ${!!dayData.supervisorFeedback ? 'text-amber-700 font-medium print:text-black' : 'text-slate-600'}`}>{dayData.supervisorFeedback || '-'}</td>
                         </tr>
