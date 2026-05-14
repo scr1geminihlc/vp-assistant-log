@@ -272,13 +272,13 @@ export default function App() {
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white rounded-xl border flex flex-col">
                 <div className="bg-slate-50 px-5 py-3 border-b flex items-center gap-2"><Edit3 className="w-4 h-4" /><h2 className="font-semibold text-slate-700">助理備註</h2></div>
-                <textarea className="p-5 w-full h-40 resize-none outline-none text-sm" placeholder="無備註" value={logData.assistantNotes || ''} onChange={(e) => updateDocData({ assistantNotes: e.target.value })} disabled={role === 'supervisor'} />
+                <textarea key={selectedDate} className="p-5 w-full h-40 resize-none outline-none text-sm" placeholder="無備註" defaultValue={logData.assistantNotes || ''} onBlur={(e) => updateDocData({ assistantNotes: e.target.value })} disabled={role === 'supervisor'} />
               </div>
               <div className={`rounded-xl border flex flex-col ${role === 'supervisor' ? 'border-amber-200' : 'border-slate-200'}`}>
                 <div className={`px-5 py-3 border-b flex items-center justify-between ${role === 'supervisor' ? 'bg-amber-50' : 'bg-slate-100'}`}>
                   <div className="flex items-center gap-2"><Lock className="w-4 h-4 text-amber-600" /><h2 className="font-semibold text-amber-800">主管/同仁 提醒與改進事項</h2></div>
                 </div>
-                <textarea className="p-5 w-full h-40 resize-none outline-none text-sm" placeholder={role === 'supervisor' ? "輸入提醒事項..." : "無提醒事項"} value={logData.supervisorFeedback || ''} onChange={(e) => updateDocData({ supervisorFeedback: e.target.value })} disabled={role === 'assistant'} />
+                <textarea key={selectedDate} className="p-5 w-full h-40 resize-none outline-none text-sm" placeholder={role === 'supervisor' ? "輸入提醒事項..." : "無提醒事項"} defaultValue={logData.supervisorFeedback || ''} onBlur={(e) => updateDocData({ supervisorFeedback: e.target.value })} disabled={role === 'assistant'} />
               </div>
             </div>
           </>
