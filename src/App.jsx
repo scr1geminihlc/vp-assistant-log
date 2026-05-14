@@ -232,10 +232,6 @@ export default function App() {
     : 'bg-white border-slate-100 shadow-sm'
 }`}>
   <div className="relative flex items-center">
-    <input
-      type="checkbox"
-      className="w-7 h-7 rounded-full border-2 border-red-300 text-red-600 focus:ring-red-500 cursor-pointer"
-      checked={logData?.tasks?.leave_day || false}
 <input
       type="checkbox"
       className="w-7 h-7 rounded-full border-2 border-red-300 text-red-600 focus:ring-red-500 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
