@@ -32,7 +32,7 @@ const taskConfig = [
   { id: 'morning_lunch', time: '早上', title: '買楊副午餐', desc: '約11:00時，詢問秘書需不需要幫副校長買午餐。' },
   { id: 'afternoon_trash', time: '下午', title: '收垃圾與水槽清理', desc: '收垃圾並倒至茶水間公用垃圾桶。\n*倒垃圾時一併將水槽網的渣渣倒掉。' },
   { id: 'afternoon_wash', time: '下午', title: '茶具清洗與下班整理', desc: '*若後續沒訪客，下班前把茶水倒掉及洗茶壺。' },
-  { id: 'afternoon_curtain_down', time: '下午', title: '拉下窗簾', desc: '窗戶請順手關閉' },
+  { id: 'afternoon_curtain_down', time: '下午', title: '拉下窗簾', desc: '請順手關窗' },
   { id: 'anytime_mail', time: '下午', title: '郵件收發', desc: '收發室收郵務。' }
 ];
 
