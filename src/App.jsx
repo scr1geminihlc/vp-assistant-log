@@ -222,11 +222,6 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
               </div>
             </div>
 
-            {role === 'assistant' && (
-              <div className="bg-blue-50 text-blue-800 p-4 rounded-lg flex items-start gap-3 mb-6 print:hidden">
-                <Info className="w-5 h-5 mt-0.5 shrink-0" /><p className="text-sm">請確實核對並勾選完成的工作項目。最下方的主管提醒事項僅供檢視。</p>
-              </div>
-            )}
 {/* --- 獨立請假聲明卡片 --- */}
 <div className={`mb-6 p-4 rounded-xl border-2 flex items-center gap-4 transition-all ${
   logData?.tasks?.leave_day 
@@ -276,6 +271,13 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
     </li>
   </ul>
 </div>
+            
+            {role === 'assistant' && (
+  <div className="bg-blue-50 text-blue-800 p-4 rounded-lg flex items-start gap-3 mb-6 print:hidden">
+    <Info className="w-5 h-5 mt-0.5 shrink-0" /><p className="text-sm">請確實核對並勾選完成的工作項目。最下方的主管提醒事項僅供檢視。</p>
+  </div>
+)}
+            
             <div className="space-y-6">
               {['早上', '下午', '不定時'].map((timeGroup) => {
                 const groupTasks = taskConfig.filter(t => t.time === timeGroup);
