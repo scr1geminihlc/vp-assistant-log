@@ -249,6 +249,31 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
     </p>
   </div>
 </div>
+            {/* --- 核心素養提醒字卡 --- */}
+<div className="mb-6 p-5 bg-indigo-50 border-2 border-indigo-100 rounded-xl shadow-sm print:hidden">
+  <div className="flex items-center gap-2 mb-3 text-indigo-700">
+    <span className="text-xl">💡</span>
+    <h3 className="font-bold text-lg">核心工作素養與提醒</h3>
+  </div>
+  <ul className="space-y-3 text-slate-700">
+    <li className="flex items-start gap-2">
+      <span className="text-indigo-400 mt-1">●</span>
+      <span>熟記各單位位置、主管及秘書名字</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-indigo-400 mt-1">●</span>
+      <span>主動整理辦公室環境 <span className="text-xs text-slate-500">(收納、文具、資料、雜物整理等)</span></span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-indigo-400 mt-1">●</span>
+      <span>練習筆記臨時交辦事項，處理完成劃掉</span>
+    </li>
+    <li className="flex items-start gap-2">
+      <span className="text-indigo-400 mt-1">●</span>
+      <span>練習將各式資料分類整理 <span className="text-xs text-slate-500">(分機表/校園位置圖/...)</span></span>
+    </li>
+  </ul>
+</div>
             <div className="space-y-6">
               {['早上', '下午', '不定時'].map((timeGroup) => {
                 const groupTasks = taskConfig.filter(t => t.time === timeGroup);
