@@ -27,7 +27,7 @@ const taskConfig = [
   { id: 'morning_open', time: '早上', title: '辦公室開門', desc: '將門長開 (卡長放直到逼兩聲)' },
   { id: 'morning_clean', time: '早上', title: '環境整潔 (掃地.擦桌.拖地.拉窗簾.澆花.洗水槽)', desc: '*副校長在時不打擾，等副校長外出時補整理。\n*適時檢查水壺有沒有水、咖啡喝完杯子清洗。\n*一個禮拜至少換一次水槽網。\n*視情況清洗水槽、拖地。' },
   { id: 'morning_coffee', time: '早上', title: '準備咖啡 (馬克杯/保溫瓶)', desc: '水量: Extra Long Coffee / 濃度: Standard Coffee。\n*馬克杯 : 2杯+1杯+一些熱水\n*開會保溫瓶 : 2杯+一些點熱水' },
-  { id: 'morning_tea', time: '早上', title: '準備茶一壺', desc: <div>茶包袋 (1.5-2匙)茶葉。<br /><strong className="text-base">*杯杯、茶壺、保溫瓶都需用洗碗精清洗。</strong></div> },
+  { id: 'morning_tea', time: '早上', title: '準備茶一壺', desc: <div>茶包袋 (1.5-2匙)茶葉。<br /><strong className="text-red-600">*杯杯、茶壺、保溫瓶都需用洗碗精清洗。</strong></div> },
   { id: 'morning_lunch', time: '早上', title: '買楊副午餐', desc: '約11:00時，詢問秘書需不需要幫副校長買午餐。' },
   { id: 'afternoon_trash', time: '下午', title: '收垃圾與水槽清理', desc: '收垃圾並倒至茶水間公用垃圾桶。\n*倒垃圾時一併將水槽網的渣渣倒掉。' },
   { id: 'afternoon_wash', time: '下午', title: '茶具清洗與下班整理', desc: '*若後續沒訪客，下班前把茶水倒掉及洗茶壺。' },
