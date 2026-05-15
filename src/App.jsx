@@ -48,7 +48,7 @@ export default function App() {
   const [showPasswordPrompt, setShowPasswordPrompt] = useState(false);
   const [passwordInput, setPasswordInput] = useState('');
   const [passwordError, setPasswordError] = useState('');
-  const SUPERVISOR_PASSWORD = 'wntest'; // ★ 主管密碼在此修改
+  const SUPERVISOR_PASSWORD = '1017'; // ★ 主管密碼在此修改
 
   const logData = allLogs[selectedDate] || { tasks: {}, supervisorFeedback: '', assistantNotes: '', customTasks: [] };
 
