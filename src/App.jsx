@@ -253,7 +253,7 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
 <div className="mb-6 p-5 bg-indigo-50 border-2 border-indigo-100 rounded-xl shadow-sm print:hidden">
   <div className="flex items-center gap-2 mb-3 text-indigo-700">
     <span className="text-xl">💡</span>
-    <h3 className="font-bold text-lg">核心工作素養與提醒</h3>
+    <h3 className="font-bold text-lg">備忘錄</h3>
   </div>
   <ul className="space-y-3 text-slate-700">
     <li className="flex items-start gap-2">
