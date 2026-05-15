@@ -269,6 +269,10 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
       <span className="text-indigo-400 mt-1">●</span>
       <span>練習將各式資料分類整理 <span className="text-xs text-slate-500">(分機表/校園位置圖/...)</span></span>
     </li>
+    <li className="flex items-start gap-2">
+      <span className="text-indigo-400 mt-1">●</span>
+      <span>清潔飲水機底部；使用過碳酸鈉配熱水浸泡各類杯具。<span className="text-xs text-slate-500">（每兩週一次，固定於星期四下班前進行浸泡，並於隔日完成清洗。）</span></span>
+    </li>
   </ul>
 </div>
             
