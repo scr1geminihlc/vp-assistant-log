@@ -176,7 +176,7 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
                       const dayData = allLogs[dateStr] || {};
                       const dayCustomTasks = dayData.customTasks || [];
                       const completed = Object.values(dayData.tasks || {}).filter(Boolean).length + dayCustomTasks.filter(t => t.completed).length;
-                      const total = taskConfig.length + dayCustomTasks.length;
+                      const total = taskConfig.length - 1 + dayCustomTasks.length;
                       return (
                         <tr key={dateStr} className={`${dateStr === new Date().toISOString().split('T')[0] ? 'bg-blue-50/40' : ''} ${completed > 0 && completed < total ? 'bg-red-50/60' : ''} ${!!dayData.supervisorFeedback ? 'bg-amber-50/40' : ''}`}>
                           <td className="px-4 py-3 font-medium text-slate-700 whitespace-nowrap">{dateStr.split('-').slice(1).join('/')}</td>
