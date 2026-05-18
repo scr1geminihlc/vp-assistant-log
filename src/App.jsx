@@ -181,7 +181,9 @@ const progressPercent = totalTasksCount > 0 ? Math.round((totalCompletedTasks / 
                       const total = taskConfig.length - 1 + dayCustomTasks.length;
                       return (
                         <tr key={dateStr} className={`${dateStr === new Date().toISOString().split('T')[0] ? 'bg-blue-50/40' : ''} ${completed > 0 && completed < total ? 'bg-red-50/60' : ''} ${!!dayData.supervisorFeedback ? 'bg-amber-50/40' : ''}`}>
-                          <td className="px-4 py-3 font-medium text-slate-700 whitespace-nowrap">{dateStr.split('-').slice(1).join('/')}</td>
+                          <td className="px-4 py-3 font-medium text-slate-700 whitespace-nowrap">
+  {dateStr.split('-').slice(1).join('/')} <span className="text-slate-400 text-sm ml-1">({['日', '一', '二', '三', '四', '五', '六'][new Date(dateStr).getDay()]})</span>
+</td>
   <td className="px-4 py-3">
   {dayData?.tasks?.leave_day ? (
     <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-bold shadow-sm">休假</span>
